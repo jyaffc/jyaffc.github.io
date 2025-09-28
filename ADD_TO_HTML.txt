@@ -1,0 +1,7 @@
+Paste these into your HTML to hook up the optional files.
+
+In <head> (after style.css):
+<link rel="stylesheet" href="assets/css/custom.css">
+
+Before </body> (after main.js):
+<script src="assets/js/custom.js"></script>
