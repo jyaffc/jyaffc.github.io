@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Nathan Ramirez's engineering projects including robotics, computer vision, and embedded systems.">
   <title>Projects — Nathan Ramirez</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+  <!-- Navigation Header -->
   <header class="container">
     <nav class="nav">
       <a class="brand" href="/">Nathan Ramirez</a>
@@ -16,38 +18,105 @@
       </div>
     </nav>
   </header>
+
   <main class="container">
     <h1>Projects</h1>
+    
     <section class="grid">
-      <article class="card">
-  <img src="assets/img/eye-tracking.jpg" alt="Eye-Tracking Software">
-  <h3>Eye-Tracking Software (MATLAB)</h3>
-  <p>
-    Developed an interactive eye-tracking program in MATLAB within a 4-hour build challenge. 
-    Implemented custom circle-detection algorithms and real-time frame processing with visualization features for debugging.
-  </p>
-  <a href="project-template.html#eye-tracking" target="_blank">Case Study</a> |
-  <a href="https://github.com/jyaffc/Eye-Tracking-Software" target="_blank">Code</a>
-</article>
-<article class="card">
-  <img src="assets/img/fruit-detection.jpg" alt="Fruit Detection (MATLAB)">
-  <h3>Real-Time Fruit Detection (MATLAB)</h3>
-  <p>
-    Designed and implemented an image-analysis tool in MATLAB within a 3-hour sprint to detect banana-like objects in real time. 
-    Combined color segmentation and shape analysis with bounding box overlays for reliable detection at 60fps.
-  </p>
-  <a href="project-template.html#fruit-detection" target="_blank">Case Study</a> |
-  <a href="https://github.com/jyaffc/Fruit-Object-Identification" target="_blank">Code</a>
-</article>
+      
+      <!-- ==================== PROJECT CARD TEMPLATE ====================
+      To add a new project, copy this entire <article> block and fill in:
+      1. Image: Update src="assets/img/YOUR-IMAGE.jpg" and alt text
+      2. Title: Update <h3> with your project name
+      3. Description: Update the <strong> line and main paragraph
+      4. Bullet points: Update <li> items with key achievements
+      5. Links: Update href for case study and code repository
+      ================================================================ -->
 
+      <!-- Eye-Tracking Software -->
       <article class="card">
-        <img src="assets/img/servo-arm.jpg" alt="Robotic Servo Arm">
-        <h3>Robotic Servo Arm</h3>
-        <p>Joystick + trajectory control, multi-part CAD in Onshape, ESP32 firmware.</p>
-        <a href="project-template.html#robotic-servo-arm">Case Study</a> |
-        <a href="https://github.com/jyaffc/Robotic-servo-arm" target="_blank">Code</a>
+        <img src="assets/img/eye-tracking.jpg" alt="MATLAB interface showing real-time eye tracking and pupil localization">
+        <h3>Eye-Tracking Software (MATLAB)</h3>
+        <p>
+          <strong>Fall 2025 • 4-hour build challenge</strong><br>
+          Developed an interactive eye-tracking program in MATLAB with real-time circle-detection 
+          and visualization features under time-constrained conditions.
+        </p>
+        <ul>
+          <li>Implemented adjustable parameters (sensitivity, edge thresholds, radius range)</li>
+          <li>Built real-time frame processing pipeline (~30 frames) with interactive controls</li>
+          <li>Added overlays and edge-detection sessions for rapid debugging and usability testing</li>
+          <li>Achieved ~80% pupil localization accuracy across multiple test videos</li>
+        </ul>
+        <div class="card-links">
+          <a href="project-template.html#eye-tracking">Case Study</a>
+          <a href="https://github.com/jyaffc/Eye-Tracking-Software" target="_blank" rel="noopener">Code</a>
+        </div>
       </article>
+
+      <!-- Real-Time Fruit Detection -->
+      <article class="card">
+        <img src="assets/img/fruit-detection.jpg" alt="MATLAB demo detecting banana-like fruit with bounding boxes">
+        <h3>Real-Time Fruit Detection (MATLAB)</h3>
+        <p>
+          <strong>Fall 2025 • 3-hour project sprint</strong><br>
+          Designed and implemented a MATLAB-based tool to detect banana-like objects 
+          in real time using color segmentation and shape analysis.
+        </p>
+        <ul>
+          <li>Yellow hue segmentation + curvature analysis for banana identification</li>
+          <li>Added bounding box overlays and contour highlighting for confirmation</li>
+          <li>Balanced detection thresholds for speed and accuracy (60 fps real-time performance)</li>
+          <li>Achieved ~90% detection accuracy across 30 test images and videos</li>
+        </ul>
+        <div class="card-links">
+          <a href="project-template.html#fruit-detection">Case Study</a>
+          <a href="https://github.com/jyaffc/Fruit-Object-Identification" target="_blank" rel="noopener">Code</a>
+        </div>
+      </article>
+
+      <!-- Robotic Servo Arm -->
+      <article class="card">
+        <img src="assets/img/servo-arm.jpg" alt="3D-printed dual-arm robotic manipulator prototype with ESP32 control">
+        <h3>Robotic Servo Arm → Dual-Arm Manipulator</h3>
+        <p>
+          <strong>Spring–Summer 2025</strong><br>
+          Began with a single servo-driven manipulator arm controlled by an Arduino Uno, 
+          later expanded into a dual-arm robotic manipulator with modular grippers and ESP32 networking (ESP-NOW).
+        </p>
+        <ul>
+          <li>Modeled in Onshape and later tested in SolidWorks, sliced in OrcaSlicer, fabricated via 3D printing</li>
+          <li>Upgraded control system from Arduino Uno → ESP32 for real-time networking</li>
+          <li>Implemented joystick + servo motor control for independent or synchronized arm motion</li>
+          <li>Tested load capacity, positional feedback, and dual-arm coordination</li>
+        </ul>
+        <div class="card-links">
+          <a href="project-template.html#robotic-servo-arm">Case Study</a>
+          <a href="https://github.com/jyaffc/Robotic-servo-arm" target="_blank" rel="noopener">Code</a>
+        </div>
+      </article>
+
+      <!-- Future Projects Placeholder -->
+      <article class="card placeholder">
+        <img src="assets/img/future-project.jpg" alt="Placeholder image for upcoming engineering projects">
+        <h3>Future Projects</h3>
+        <p>
+          <strong>Coming Soon</strong><br>
+          A space reserved for upcoming engineering and research projects. 
+          Planned additions include advanced robotics, embedded systems, and computer vision tools.
+        </p>
+        <ul>
+          <li>Advanced robotics systems and autonomous navigation</li>
+          <li>Embedded systems with real-time processing</li>
+          <li>Computer vision and machine learning applications</li>
+        </ul>
+        <div class="card-links">
+          <a href="#" class="disabled">Case Study (coming soon)</a>
+        </div>
+      </article>
+
     </section>
   </main>
 </body>
+</html>
 </html>
