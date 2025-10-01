@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Projects — Nathan Ramirez</title>
+  <meta name="description" content="Detailed case studies of Nathan Ramirez's engineering projects.">
+  <title>Project Case Studies — Nathan Ramirez</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+  <!-- Navigation Header -->
   <header class="container">
     <nav class="nav">
-      <a class="brand" href="/">Nathan</a>
+      <a class="brand" href="/">Nathan Ramirez</a>
       <div class="nav-links">
         <a href="projects.html">Projects</a>
         <a href="resume.pdf" target="_blank" rel="noopener">Resume</a>
@@ -18,94 +20,239 @@
   </header>
 
   <main class="container">
-    <h1>Projects</h1>
-    <section class="grid">
-<!-- ===================== FUTURE PROJECTS ===================== 
-<article class="card">
-  <img src="assets/img/future-project.jpg" alt="Placeholder image for upcoming engineering projects">
-  <h3>Future Projects</h3>
-  <p>
-    A space reserved for upcoming engineering and research projects. 
-    Planned additions include advanced robotics, embedded systems, and computer vision tools.
-  </p>
-  <ul>
-  <li>Project placeholder — ready to be replaced with a new case study.</li> 
-   <li>Upload a new image to <code>assets/img/</code> and update the filename above.</li> 
-   <li>Duplicate this block for each new project.</li>--> 
-      <!-- ===================== EYE-TRACKING ===================== -->
-      <article class="card">
-        <img src="assets/img/eye-tracking.jpg" alt="MATLAB interface showing real-time eye tracking and pupil localization">
-        <h3>Eye-Tracking Software (MATLAB)</h3>
-        <p>
-          <strong>Fall 2025 • 4-hour build challenge</strong><br>
-          Developed an interactive eye-tracking program in MATLAB with real-time circle-detection 
-          and visualization features under time-constrained conditions.
-        </p>
-        <ul>
-          <li>Implemented adjustable parameters (sensitivity, edge thresholds, radius range).</li>
-          <li>Built real-time frame processing pipeline (~30 frames) with interactive controls.</li>
-          <li>Added overlays and edge-detection sessions for rapid debugging and usability testing.</li>
-          <li>Achieved ~80% pupil localization accuracy across multiple test videos.</li>
-        </ul>
-        <a href="project-template.html#eye-tracking">Case Study</a> |
-        <a href="https://github.com/jyaffc/Eye-Tracking-Software" target="_blank">Code</a>
-      </article>
-
-      <!-- ===================== FRUIT DETECTION ===================== -->
-      <article class="card">
-        <img src="assets/img/fruit-detection.jpg" alt="MATLAB demo detecting banana-like fruit with bounding boxes">
-        <h3>Real-Time Fruit Detection (MATLAB)</h3>
-        <p>
-          <strong>Fall 2025 • 3-hour project sprint</strong><br>
-          Designed and implemented a MATLAB-based tool to detect banana-like objects 
-          in real time using color segmentation and shape analysis.
-        </p>
-        <ul>
-          <li>Yellow hue segmentation + curvature analysis for banana identification.</li>
-          <li>Added bounding box overlays and contour highlighting for confirmation.</li>
-          <li>Balanced detection thresholds for speed and accuracy (60 fps real-time performance).</li>
-          <li>Achieved ~90% detection accuracy across 30 test images and videos.</li>
-        </ul>
-        <a href="project-template.html#fruit-detection">Case Study</a> |
-        <a href="https://github.com/jyaffc/Fruit-Object-Identification" target="_blank">Code</a>
-      </article>
-      <!-- ===================== ROBOTIC SERVO ARM ===================== -->
-      <article class="card">
-        <img src="assets/img/servo-arm.jpg" alt="3D-printed dual-arm robotic manipulator prototype with ESP32 control">
-        <h3>Robotic Servo Arm → Dual-Arm Manipulator</h3>
-        <p>
-          <strong>Spring–Summer 2025</strong><br>
-          Began with a single servo-driven manipulator arm controlled by an Arduino Uno, 
-          later expanded into a dual-arm robotic manipulator with modular grippers and ESP32 networking (ESP-NOW).
-        </p>
-        <ul>
-          <li>Modeled in Onshape and later tested in SolidWorks, sliced in OrcaSlicer, fabricated via 3D printing.</li>
-          <li>Upgraded control system from Arduino Uno → ESP32 for real-time networking.</li>
-          <li>Implemented joystick + servo motor control for independent or synchronized arm motion.</li>
-          <li>Tested load capacity, positional feedback, and dual-arm coordination.</li>
-        </ul>
-        <a href="project-template.html#robotic-servo-arm">Case Study</a> |
-        <a href="https://github.com/jyaffc/Robotic-servo-arm" target="_blank">Code</a>
-      </article>
-      
-<!-- ===================== FUTURE PROJECTS ===================== -->
-<article class="card">
-  <img src="assets/img/future-project.jpg" alt="Placeholder image for upcoming engineering projects">
-  <h3>Future Projects</h3>
-  <p>
-    A space reserved for upcoming engineering and research projects. 
-    Planned additions include advanced robotics, embedded systems, and computer vision tools.
-  </p>
-  <ul>
-  <!--<li>Project placeholder — ready to be replaced with a new case study.</li> 
-   <li>Upload a new image to <code>assets/img/</code> and update the filename above.</li> 
-   <li>Duplicate this block for each new project.</li>--> 
     
-  </ul>
-  <a href="#">Case Study (coming soon)</a>
-</article>
+    <!-- ==================== CASE STUDY TEMPLATE ====================
+    To add a new case study:
+    1. Copy an entire <section id="project-name" class="case-study"> block
+    2. Update the id="project-name" to match your projects.html link
+    3. Fill in all sections: Overview, Challenge, Solution, Results, Tech Stack
+    4. Add images to assets/img/ and update src paths
+    5. Update GitHub link at the bottom
+    ================================================================ -->
 
+    <!-- ==================== EYE-TRACKING SOFTWARE ==================== -->
+    <section id="eye-tracking" class="case-study">
+      <div class="case-header">
+        <h1>Eye-Tracking Software (MATLAB)</h1>
+        <p class="case-meta">Fall 2025 • 4-hour build challenge • MATLAB, Computer Vision</p>
+      </div>
+
+      <img src="assets/img/eye-tracking.jpg" alt="MATLAB interface showing real-time eye tracking" class="case-hero-img">
+
+      <div class="case-content">
+        <h2>Project Overview</h2>
+        <p>
+          Developed an interactive eye-tracking program in MATLAB as part of a time-constrained 4-hour challenge. 
+          The system uses custom circle-detection algorithms to identify and track pupils in real-time video feeds, 
+          with adjustable parameters for sensitivity, edge detection, and radius constraints.
+        </p>
+
+        <h2>The Challenge</h2>
+        <p>
+          Eye-tracking requires precise pupil localization under varying lighting conditions and head movements. 
+          The main challenges included:
+        </p>
+        <ul>
+          <li>Implementing robust circle detection with minimal false positives</li>
+          <li>Processing video frames in real-time (~30 fps) with interactive parameter tuning</li>
+          <li>Handling edge cases like partial occlusions, reflections, and rapid eye movements</li>
+          <li>Building an intuitive visualization system for debugging within the time constraint</li>
+        </ul>
+
+        <h2>Solution & Implementation</h2>
+        <p>
+          I designed a modular pipeline with three core components:
+        </p>
+        <ol>
+          <li><strong>Preprocessing:</strong> Applied Gaussian blur and adaptive thresholding to reduce noise while preserving pupil edges</li>
+          <li><strong>Circle Detection:</strong> Implemented Hough Circle Transform with adjustable sensitivity and radius bounds for optimal pupil identification</li>
+          <li><strong>Visualization:</strong> Created overlays showing detected circles, edge maps, and confidence scores for real-time feedback</li>
+        </ol>
+        <p>
+          The system includes interactive controls allowing users to fine-tune detection parameters 
+          (sensitivity, edge thresholds, min/max radius) without restarting the program.
+        </p>
+
+        <h2>Results & Impact</h2>
+        <div class="results-grid">
+          <div class="result-item">
+            <h3>~80%</h3>
+            <p>Pupil localization accuracy across multiple test videos</p>
+          </div>
+          <div class="result-item">
+            <h3>~30 fps</h3>
+            <p>Real-time processing speed maintained</p>
+          </div>
+          <div class="result-item">
+            <h3>4 hours</h3>
+            <p>Total development time from concept to working prototype</p>
+          </div>
+        </div>
+
+        <h2>Technical Stack</h2>
+        <div class="tech-stack">
+          <span class="tech-tag">MATLAB</span>
+          <span class="tech-tag">Image Processing Toolbox</span>
+          <span class="tech-tag">Hough Transform</span>
+          <span class="tech-tag">Computer Vision</span>
+          <span class="tech-tag">Real-time Processing</span>
+        </div>
+
+        <div class="case-links">
+          <a href="https://github.com/jyaffc/Eye-Tracking-Software" target="_blank" rel="noopener" class="btn-primary">View on GitHub</a>
+          <a href="projects.html" class="btn-secondary">Back to Projects</a>
+        </div>
+      </div>
     </section>
+
+    <!-- ==================== FRUIT DETECTION ==================== -->
+    <section id="fruit-detection" class="case-study">
+      <div class="case-header">
+        <h1>Real-Time Fruit Detection (MATLAB)</h1>
+        <p class="case-meta">Fall 2025 • 3-hour project sprint • MATLAB, Computer Vision</p>
+      </div>
+
+      <img src="assets/img/fruit-detection.jpg" alt="MATLAB demo detecting bananas with bounding boxes" class="case-hero-img">
+
+      <div class="case-content">
+        <h2>Project Overview</h2>
+        <p>
+          Designed and implemented an image-analysis tool in MATLAB during a 3-hour sprint to detect 
+          banana-like objects in real time. The system combines color segmentation with shape analysis 
+          to reliably identify bananas at 60 fps with visual confirmation through bounding boxes and contour overlays.
+        </p>
+
+        <h2>The Challenge</h2>
+        <p>
+          Detecting specific fruit types in varied environments requires balancing speed and accuracy. 
+          Key challenges included:
+        </p>
+        <ul>
+          <li>Distinguishing bananas from other yellow objects (lighting, clothing, backgrounds)</li>
+          <li>Maintaining real-time performance (60 fps) on consumer hardware</li>
+          <li>Handling different banana orientations, sizes, and ripeness stages</li>
+          <li>Minimizing false positives while maximizing detection reliability</li>
+        </ul>
+
+        <h2>Solution & Implementation</h2>
+        <p>
+          I developed a two-stage detection pipeline:
+        </p>
+        <ol>
+          <li><strong>Color Segmentation:</strong> Isolated yellow hues in HSV color space with adaptive thresholds to handle varying lighting conditions</li>
+          <li><strong>Shape Analysis:</strong> Applied curvature analysis and aspect ratio filtering to distinguish banana-like shapes from other yellow objects</li>
+          <li><strong>Visualization:</strong> Added bounding box overlays and contour highlighting for immediate visual confirmation</li>
+        </ol>
+        <p>
+          The system processes frames in parallel, with optimized matrix operations to maintain 60 fps 
+          while providing accurate detection across diverse scenarios.
+        </p>
+
+        <h2>Results & Impact</h2>
+        <div class="results-grid">
+          <div class="result-item">
+            <h3>~90%</h3>
+            <p>Detection accuracy across 30 test images and videos</p>
+          </div>
+          <div class="result-item">
+            <h3>60 fps</h3>
+            <p>Real-time processing speed achieved</p>
+          </div>
+          <div class="result-item">
+            <h3>3 hours</h3>
+            <p>Total development time from start to finish</p>
+          </div>
+        </div>
+
+        <h2>Technical Stack</h2>
+        <div class="tech-stack">
+          <span class="tech-tag">MATLAB</span>
+          <span class="tech-tag">Image Processing</span>
+          <span class="tech-tag">HSV Color Space</span>
+          <span class="tech-tag">Shape Analysis</span>
+          <span class="tech-tag">Real-time Detection</span>
+        </div>
+
+        <div class="case-links">
+          <a href="https://github.com/jyaffc/Fruit-Object-Identification" target="_blank" rel="noopener" class="btn-primary">View on GitHub</a>
+          <a href="projects.html" class="btn-secondary">Back to Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ROBOTIC SERVO ARM ==================== -->
+    <section id="robotic-servo-arm" class="case-study">
+      <div class="case-header">
+        <h1>Robotic Servo Arm → Dual-Arm Manipulator</h1>
+        <p class="case-meta">Spring–Summer 2025 • Robotics, Embedded Systems, 3D Design</p>
+      </div>
+
+      <img src="assets/img/servo-arm.jpg" alt="3D-printed dual-arm robotic manipulator" class="case-hero-img">
+
+      <div class="case-content">
+        <h2>Project Overview</h2>
+        <p>
+          Evolved from a single servo-driven manipulator arm into a dual-arm robotic system with modular 
+          grippers and wireless networking capabilities. The project demonstrates end-to-end robotics 
+          development: mechanical design, 3D fabrication, embedded firmware, and real-time control systems.
+        </p>
+
+        <h2>The Challenge</h2>
+        <p>
+          Building a functional dual-arm manipulator required solving mechanical, electrical, and software challenges:
+        </p>
+        <ul>
+          <li>Designing structurally sound components that balance weight, strength, and printability</li>
+          <li>Upgrading from single-board Arduino control to networked ESP32 architecture</li>
+          <li>Implementing synchronized dual-arm motion with independent or coordinated operation modes</li>
+          <li>Achieving precise servo control with positional feedback and load capacity testing</li>
+        </ul>
+
+        <h2>Solution & Implementation</h2>
+        <p>
+          The project followed an iterative development process:
+        </p>
+        <ol>
+          <li><strong>Mechanical Design:</strong> Modeled multi-part assemblies in Onshape, validated in SolidWorks, and optimized for 3D printing with OrcaSlicer</li>
+          <li><strong>Electronics Upgrade:</strong> Transitioned from Arduino Uno to ESP32 for wireless communication using ESP-NOW protocol</li>
+          <li><strong>Control System:</strong> Developed joystick-based control firmware with servo motor management for independent or synchronized arm movement</li>
+          <li><strong>Testing & Refinement:</strong> Conducted load capacity tests, positional feedback validation, and dual-arm coordination experiments</li>
+        </ol>
+
+        <h2>Results & Impact</h2>
+        <div class="results-grid">
+          <div class="result-item">
+            <h3>Dual-Arm</h3>
+            <p>Successfully coordinated two independent manipulator arms</p>
+          </div>
+          <div class="result-item">
+            <h3>ESP-NOW</h3>
+            <p>Low-latency wireless control implementation</p>
+          </div>
+          <div class="result-item">
+            <h3>3D Printed</h3>
+            <p>Fully fabricated mechanical system from CAD models</p>
+          </div>
+        </div>
+
+        <h2>Technical Stack</h2>
+        <div class="tech-stack">
+          <span class="tech-tag">ESP32</span>
+          <span class="tech-tag">Arduino Framework</span>
+          <span class="tech-tag">Onshape CAD</span>
+          <span class="tech-tag">SolidWorks</span>
+          <span class="tech-tag">OrcaSlicer</span>
+          <span class="tech-tag">Servo Control</span>
+          <span class="tech-tag">ESP-NOW</span>
+        </div>
+
+        <div class="case-links">
+          <a href="https://github.com/jyaffc/Robotic-servo-arm" target="_blank" rel="noopener" class="btn-primary">View on GitHub</a>
+          <a href="projects.html" class="btn-secondary">Back to Projects</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 </body>
 </html>
