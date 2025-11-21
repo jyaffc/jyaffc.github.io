@@ -253,6 +253,82 @@
       </div>
     </section>
 
+    <!-- ==================== TEMPERATURE MONITORING SYSTEM ==================== -->
+    <section id="temperature-monitor" class="case-study">
+      <div class="case-header">
+        <h1>Embedded Temperature Monitoring System</h1>
+        <p class="case-meta">Fall 2024 • Arduino, Embedded Systems, PCB Design</p>
+      </div>
+
+      <img src="assets/img/temperature-monitor.jpg" alt="Arduino-based temperature monitoring system with LCD display" class="case-hero-img">
+
+      <div class="case-content">
+        <h2>Project Overview</h2>
+        <p>
+          Designed and programmed an Arduino-based temperature monitoring system featuring a TMP36 analog sensor, 
+          multi-modal alert system, and custom PCB assembly. The system provides real-time temperature monitoring 
+          with threshold detection algorithms and visual/auditory alerts for out-of-range conditions.
+        </p>
+
+        <h2>The Challenge</h2>
+        <p>
+          Creating a reliable embedded monitoring system required balancing multiple engineering disciplines:
+        </p>
+        <ul>
+          <li>Implementing precise temperature threshold detection within a narrow operational range (70-75°F)</li>
+          <li>Designing optimal electrical circuits with proper current-limiting resistors for LED indicators</li>
+          <li>Integrating multiple I/O components (LCD, LEDs, buzzer, sensor) on a single microcontroller</li>
+          <li>Ensuring reliable PCB assembly with proper soldering techniques and short-circuit prevention</li>
+          <li>Creating a compact enclosure design that accommodates all components while allowing sensor access</li>
+        </ul>
+
+        <h2>Solution & Implementation</h2>
+        <p>
+          The project integrated hardware design, circuit analysis, and embedded programming:
+        </p>
+        <ol>
+          <li><strong>Circuit Design:</strong> Performed electrical analysis using Kirchhoff's Voltage Law to calculate optimal LED resistor values (220Ω for red LED at 14mA, 1000Ω for green LED at 3.1mA)</li>
+          <li><strong>Sensor Integration:</strong> Implemented TMP36 analog temperature sensor with threshold detection algorithms for 70-75°F operational range</li>
+          <li><strong>Multi-Modal Alerts:</strong> Integrated I2C LCD display for temperature readout, dual-LED indicators for visual status, and piezo buzzer for auditory threshold violation alerts</li>
+          <li><strong>PCB Assembly:</strong> Executed precision soldering of sensor circuits with heat shrink insulation to prevent electrical shorts</li>
+          <li><strong>Enclosure Design:</strong> Created custom CAD enclosure in Onshape with mounting constraints for compact component layout and external sensor access</li>
+        </ol>
+
+        <h2>Results & Impact</h2>
+        <div class="results-grid">
+          <div class="result-item">
+            <h3>70-75°F</h3>
+            <p>Precise temperature threshold detection range</p>
+          </div>
+          <div class="result-item">
+            <h3>Multi-Modal</h3>
+            <p>LCD, LED, and buzzer alert integration</p>
+          </div>
+          <div class="result-item">
+            <h3>Custom PCB</h3>
+            <p>Hand-soldered circuit assembly with insulation</p>
+          </div>
+        </div>
+
+        <h2>Technical Stack</h2>
+        <div class="tech-stack">
+          <span class="tech-tag">Arduino</span>
+          <span class="tech-tag">C/C++</span>
+          <span class="tech-tag">TMP36 Sensor</span>
+          <span class="tech-tag">I2C Protocol</span>
+          <span class="tech-tag">LCD Display</span>
+          <span class="tech-tag">Circuit Analysis</span>
+          <span class="tech-tag">PCB Soldering</span>
+          <span class="tech-tag">Onshape CAD</span>
+        </div>
+
+        <div class="case-links">
+          <a href="https://github.com/jyaffc/Temperature-Box-Arduino-code/tree/main" target="_blank" rel="noopener" class="btn-primary">View on GitHub</a>
+          <a href="projects.html" class="btn-secondary">Back to Projects</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 </body>
 </html>
