@@ -1,37 +1,151 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Nathan Ramirez - Biomedical Engineering student specializing in robotics, embedded systems, and computer vision.">
-  <title>Nathan Ramirez — Engineering Portfolio</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Nathan Ramirez, biomedical engineering and robotics, Boston University, May 2027.">
+<title>Nathan Ramirez Engineering</title>
+
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+/* Layout: an engineer's signal chain. The page reads left to right like a device, input to output. */
+:root{--bg:#EDF2F3;--panel:#FFFFFF;--ink:#10242B;--mute:#4C626B;--line:#C9D6DA;--accent:#0B6E8A;--alert:#C8401F;--display:"Archivo","Arial Narrow",Arial,sans-serif;--body:"Source Sans 3","Segoe UI",Arial,sans-serif;--mono:"IBM Plex Mono",Consolas,monospace}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1A1F;--panel:#15252C;--ink:#E7F0F2;--mute:#9DB2BA;--line:#2B4149;--accent:#5CC2DE;--alert:#FF8A66;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0E1A1F;--panel:#15252C;--ink:#E7F0F2;--mute:#9DB2BA;--line:#2B4149;--accent:#5CC2DE;--alert:#FF8A66;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.55 var(--body)}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0}
+nav{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;align-items:center;padding-block:18px;font:500 13px/1 var(--mono)}
+nav strong{font:800 17px/1 var(--display)}
+nav div{display:flex;flex-wrap:wrap;gap:16px}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.hero{padding-block:36px 28px}
+.hero h1{font:800 clamp(2.3rem,6.4vw,4.3rem)/1.03 var(--display);margin:0 0 14px;text-wrap:balance;max-width:17ch}
+.hero p{max-width:62ch;font-size:1.14rem;color:var(--mute);margin:0 0 18px}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{font:500 14px/1 var(--mono);padding:12px 16px;border:1.5px solid var(--accent);color:var(--accent);text-decoration:none}
+.btn.fill{background:var(--accent);color:var(--bg)}
+.trace{margin-top:30px;border-block:1px solid var(--line);padding-block:12px}
+.trace svg{display:block;width:100%;height:150px}
+.trace figcaption{font:400 12px/1.4 var(--mono);color:var(--mute);margin-top:6px}
+h2{font:800 1.7rem/1.1 var(--display);margin:0 0 6px}
+section{padding-block:30px}
+.lede{color:var(--mute);margin:0 0 20px;max-width:62ch}
+.case{background:var(--panel);border:1px solid var(--line);padding:22px;display:grid;gap:10px;margin-bottom:16px}
+.case h3{font:700 1.3rem/1.2 var(--display);margin:0}
+.meta{font:400 13px/1.4 var(--mono);color:var(--mute)}
+.chain{display:flex;flex-wrap:wrap;gap:6px;align-items:center;list-style:none;margin:2px 0;padding:0;font:500 12.5px/1.2 var(--mono)}
+.chain li{padding:6px 8px;border:1px solid var(--line);background:var(--bg)}
+.chain li+li::before{content:"\2192";margin-right:8px;color:var(--accent)}
+.case p{margin:0;max-width:72ch}
+.case ul{margin:0;padding-left:18px;max-width:72ch}
+.result{color:var(--ink);font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.mini{border-top:2px solid var(--accent);padding-top:10px;min-width:0}
+.mini h3{font:700 1.05rem/1.25 var(--display);margin:0 0 4px}
+.mini p{margin:0;font-size:.98rem;color:var(--mute)}
+.rows{display:grid;gap:14px}
+.row{display:grid;grid-template-columns:190px 1fr;gap:14px}
+.row b{font-family:var(--display)}
+.row .when{font:400 13px/1.5 var(--mono);color:var(--mute)}
+.row p{margin:2px 0 0;color:var(--mute)}
+@media (max-width:620px){.row{grid-template-columns:1fr;gap:2px}}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px 22px}
+.skills dt{font:500 13px/1.3 var(--mono);color:var(--accent)}
+.skills dd{margin:2px 0 0}
+footer{border-top:1px solid var(--line);padding-block:22px;font:400 14px/1.5 var(--mono);color:var(--mute)}
+</style>
 </head>
 <body>
-  <!-- Navigation Header -->
-  <header class="container">
-    <nav class="nav">
-      <a class="brand" href="/">Nathan Ramirez</a>
-      <div class="nav-links">
-        <a href="projects.html">Projects</a>
-        <a href="resume.pdf" target="_blank" rel="noopener">Resume</a>
-        <a href="https://www.linkedin.com/in/nathan-ramirez-a111a8303" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/jyaffc" target="_blank" rel="noopener">GitHub</a>
-      </div>
-    </nav>
-  </header>
+<div class="wrap">
+<nav aria-label="Main"><strong>Nathan Ramirez</strong><div><a href="#work">Work</a><a href="#background">Background</a><a href="resume.pdf">Resume</a><a href="https://www.linkedin.com/in/nathan-ramirez-a111a8303">LinkedIn</a><a href="https://github.com/jyaffc">GitHub</a></div></nav>
+<header class="hero">
+<h1>I build medical hardware that works outside the lab.</h1>
+<p>Biomedical engineering and robotics senior at Boston University, graduating May 2027. I write firmware, machine parts and have drawn blood from real patients, so I design with the clinic in mind.</p>
+<div class="btns"><a class="btn fill" href="#work">See the work</a><a class="btn" href="resume.pdf">Resume (PDF)</a></div>
+<figure class="trace" style="margin-inline:0;margin-bottom:0">
+<svg id="trace" viewBox="0 0 1000 150" preserveAspectRatio="none" role="img" aria-label="Illustrative head impact trace with one spike above a 1.5 g threshold line"></svg>
+<figcaption>Illustrative trace: NeuroTrack flags any impact above the 1.5 g threshold, sampled at 100 Hz.</figcaption>
+</figure>
+</header>
+<main>
+<section id="work">
+<h2>Selected work</h2>
+<p class="lede">Four builds that show how I work, from sensor to result.</p>
+<article class="case"><h3>NeuroTrack wearable head impact monitor</h3>
+<div class="meta">Spring 2026 | 1st place, BU BMES Design-A-Thon (sponsored by BTEC)</div>
+<ol class="chain"><li>BNO055 IMU</li><li>ESP32 firmware (C++)</li><li>BLE at 100 Hz</li><li>Python receiver</li><li>1.5 g impact detection</li><li>CSV for coach dashboard</li></ol>
+<p>Coaches rarely know how often or how hard a player is hit. I built the wearable prototype and all of its data path: firmware, BLE streaming, 3D head rendering and session logging for a teammate's analytics dashboard.</p>
+<p class="result">Working prototype, first place among competing BME teams.</p>
+<p class="meta"><a href="https://github.com/jyaffc/Head_Impact_monitor">Code on GitHub</a></p></article>
+<article class="case"><h3>Automated Tissue Cutting Matrix</h3>
+<div class="meta">BU senior design, in progress through April 2027 | Dr. Tuan Tay's lab</div>
+<ol class="chain"><li>Mouse brain tissue</li><li>Tissue matrix</li><li>Automated cut</li><li>Repeatable sections</li></ol>
+<p>Hand sectioning at multiple angles is hard to repeat. On a five-person team I lead machining, prototyping and organization for a device that makes multi-angle histological sectioning consistent.</p>
+<p class="result">Build in progress. Results post here in spring 2027.</p></article>
+<article class="case"><h3>Multi-robot autonomous navigation</h3>
+<div class="meta">Fall 2025 | 12 robots in a 9 m x 5 m motion capture arena</div>
+<ol class="chain"><li>Motion capture</li><li>A* with Dubins curves</li><li>1.5 s prediction</li><li>Multi-radius avoidance</li></ol>
+<p>The planning was the easy part. The learning came from debugging: a coordinate-frame mismatch, gridlock from overlapping detection radii, and finished robots blocking paths. A graduated collision radius and filtered obstacle lists fixed them.</p>
+<p class="result">Root causes traced from data, then fixed in the planner.</p></article>
+<article class="case"><h3>Dual-arm robotic manipulator</h3>
+<div class="meta">Summer 2025 | Personal project</div>
+<ol class="chain"><li>Onshape CAD</li><li>3D printed joints</li><li>Arduino to ESP32</li><li>ESP-NOW control</li></ol>
+<p>A single servo arm grew into two arms with interchangeable grippers. I moved control from one Arduino to a wireless ESP32 network and tested load capacity and positional feedback.</p>
+<p class="meta"><a href="https://github.com/jyaffc/Robotic-servo-arm">Code on GitHub</a></p></article>
+</section>
+<section aria-labelledby="more">
+<h2 id="more">More builds</h2>
+<p class="lede">Shorter projects, each with a measured result or a real constraint.</p>
+<div class="grid">
+<div class="mini"><h3>Battlebot</h3><p>BU HackHardware. Onshape housing, ESP32 control, spring launcher and on-site repairs. <a href="https://github.com/jyaffc/Battlebot-Hack-a-thon-">Code</a></p></div>
+<div class="mini"><h3>Automatic Workspace Organizer</h3><p>CNC and 3D printed mecanum desk robot with edge sensing and a vacuum.</p></div>
+<div class="mini"><h3>Eye-Tracking Software</h3><p>MATLAB circle detection in a 4-hour challenge, about 80% pupil localization. <a href="https://github.com/jyaffc/Eye-Tracking-Software">Code</a></p></div>
+<div class="mini"><h3>Real-Time Fruit Detection</h3><p>MATLAB segmentation at 60 fps, about 90% accuracy over 30 samples. <a href="https://github.com/jyaffc/Fruit-Object-Identification">Code</a></p></div>
+<div class="mini"><h3>Embedded Temperature Monitor</h3><p>Arduino alert system with resistors sized by KVL and a soldered PCB. <a href="https://github.com/jyaffc/Temperature-Box-Arduino-code">Code</a></p></div>
+<div class="mini"><h3>Predator Alert System</h3><p>YOLO detection on a home camera with Docker, go2rtc and push alerts.</p></div>
+</div>
+</section>
+<section id="background">
+<h2>Background</h2>
+<p class="lede">Most engineering students have not run a business, worked a phlebotomy chair and planned the wiring for commercial buildings. These jobs shape how I build.</p>
+<div class="rows">
+<div class="row"><div class="when">2023 - May 2027</div><div><b>Boston University</b><p>B.S. Biomedical Engineering, Robotics concentration.</p></div></div>
+<div class="row"><div class="when">Jun 2026 - now</div><div><b>Owner, Imperium Cafe LLC</b><p>Run a coffee and bubble tea cafe in East Hartford: financial model, staff, vendors and equipment.</p></div></div>
+<div class="row"><div class="when">Jul - Sep 2025</div><div><b>Phlebotomist, Quest Diagnostics</b><p>10-20+ patients a day, 95%+ first-stick rate, chain-of-custody specimen handling, bilingual care.</p></div></div>
+<div class="row"><div class="when">May 2022 - Feb 2025</div><div><b>Contractor and Translator, Gems Home Improvement</b><p>Led teams of 2-10, drew wiring layouts for three commercial buildings to NEC code, and translated Spanish and Portuguese.</p></div></div>
+</div>
+</section>
+<section aria-labelledby="skills">
+<h2 id="skills">Skills</h2>
+<dl class="skills">
+<div><dt>Code</dt><dd>C++, Python, MATLAB, Java, Git</dd></div>
+<div><dt>Embedded</dt><dd>ESP32, Arduino, BLE, ESP-NOW, IMUs</dd></div>
+<div><dt>Design and fabrication</dt><dd>SolidWorks, Onshape, KiCad, 3D printing, machining, soldering, welding</dd></div>
+<div><dt>Lab and clinical</dt><dd>Phlebotomy, aseptic technique, pipetting, gel electrophoresis, MRI coursework</dd></div>
+<div><dt>Languages</dt><dd>English, Spanish, Portuguese, working Italian</dd></div>
+</dl>
+</section>
+</main>
+<footer>Open to full-time engineering roles starting May-June 2027 in the Boston and Connecticut area.<br>ramirez.nathan1014@gmail.com | 860.597.8919</footer>
+</div>
+<script>
+// Draw the illustrative IMU trace: low noise baseline, one impact spike, and the 1.5 g threshold line.
+(function(){
+  var s=document.getElementById('trace'),pts=[],n=500,c=getComputedStyle(document.documentElement);
+  function y(g){return 140-g*40} // 40 viewBox units per g; baseline sits at 0 g
+  for(var i=0;i<n;i++){
+    var t=i/n, g=.22+.12*Math.sin(i/9)+.07*Math.sin(i/3.1);
+    g+=2.9*Math.exp(-Math.pow((t-.72)*62,2)); // impact pulse peaks above threshold
+    pts.push((t*1000).toFixed(1)+','+y(g).toFixed(1));
+  }
+  s.innerHTML='<line x1="0" x2="1000" y1="'+y(1.5)+'" y2="'+y(1.5)+'" stroke="var(--alert)" stroke-width="1.5" stroke-dasharray="6 5" vector-effect="non-scaling-stroke"/>'+
+  '<polyline fill="none" stroke="var(--accent)" stroke-width="2" vector-effect="non-scaling-stroke" points="'+pts.join(' ')+'"/>';
+})();
+</script>
 
-  <!-- Hero Section -->
-  <main class="container">
-    <section class="hero">
-      <h1>Hello, I'm <span class="accent">Nathan Ramirez</span></h1>
-      <p>I am a Biomedical Engineering student focusing on robotics, biomedical research, embedded systems, and computer vision.</p>
-      <div class="links">
-        <a href="projects.html" class="btn-primary">View Projects</a>
-        <a href="resume.pdf" target="_blank" class="btn-secondary">Resume</a>
-        <a href="mailto:ramirez.nathan1014@gmail.com" class="btn-secondary">Email Me</a>
-      </div>
-    </section>
-  </main>
 </body>
 </html>
